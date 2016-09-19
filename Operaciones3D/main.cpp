@@ -36,14 +36,14 @@ void init()
 	glClearColor(1.0, 1.0, 1.0, 1.0);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	glOrtho(-1000, 1000, -1000, 1000, -1000, 1000);
-	glMatrixMode(GL_PROJECTION);
+  gluPerspective(60,500/500, 100,150);
+  glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-  gluPerspective(60,0,200,200);
-  // gluLookAt(5, 0, 5, 3, 0, -3, 0, 1, 0);
+  gluLookAt(50, 110, 110, 50, 0, 50, 0, 1, 0);
   //EYE=(0,0,0) at the origin
   //AT=(0,0,-100) pointing at negative-z axis (into the screen)
   //UP=(0,1,0) corresponds to y-axis.
+  // glOrtho(-1000, 1000, -1000, 1000, -1000, 1000);
 }
 
 void draw()
