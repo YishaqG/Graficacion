@@ -2,7 +2,7 @@
 
 Point3D::Point3D()
 {
-  x = y = 0.0;
+  x = y = z = 0.0;
 }
 
 Point3D::Point3D(GLdouble x, GLdouble y, GLdouble z)
