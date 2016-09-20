@@ -24,6 +24,7 @@ class Poligono3D
     Poligono3D();
     Poligono3D(Point3D&, int);
     ~Poligono3D();
+    void setPoligono(Point3D*, int);
     void move(Point3D);
     void scale(Point3D);
     void rotate(int, int);

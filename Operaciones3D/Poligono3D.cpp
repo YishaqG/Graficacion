@@ -4,9 +4,9 @@ Poligono3D::Poligono3D()
 {
   figure = new Point3D[4];
   figure[0].setPoint((GLdouble)0.0, (GLdouble)0.0, (GLdouble)0.0);
-  figure[1].setPoint((GLdouble)100.0, (GLdouble)0.0, (GLdouble)0.0);
-  figure[2].setPoint((GLdouble)100.0, (GLdouble)0.0, (GLdouble)100.0);
-  figure[3].setPoint((GLdouble)0.0, (GLdouble)0.0, (GLdouble)100.0);
+  figure[1].setPoint((GLdouble)10.0, (GLdouble)0.0, (GLdouble)0.0);
+  figure[2].setPoint((GLdouble)10.0, (GLdouble)0.0, (GLdouble)10.0);
+  figure[3].setPoint((GLdouble)0.0, (GLdouble)0.0, (GLdouble)10.0);
   numOfVertices = 4;
 }
 
@@ -19,6 +19,13 @@ Poligono3D::Poligono3D(Point3D &elm, int size)
 Poligono3D::~Poligono3D()
 {
   delete[] figure;
+}
+
+void Poligono3D::setPoligono(Point3D *x, int elm)
+{
+  delete[] figure;
+  figure = x;
+  numOfVertices = elm;
 }
 
 // void Poligono3D::move(Point3D delta)
