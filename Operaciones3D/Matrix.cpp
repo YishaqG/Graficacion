@@ -3,6 +3,11 @@
   #define MATRIX
 #endif
 
+#ifndef STRING
+  #include "string.h"
+  #define STRING
+#endif
+
   // Matrix::Matrix(double x, double y):Matrix(DEFAULT, x, y)
   // {
   //   this.Matrix(DEFAULT, x, y);
@@ -176,7 +181,8 @@
 
   void Matrix::mult(Matrix &bMatrix)
   {
-    double auxArray[rows] = {0.0, 0.0, 0.0}; //Auxiliar array to save the resulting vectors
+    double auxArray[rows]; //Auxiliar array to save the resulting vectors
+    memset(auxArray, 0.0, sizeof(double)*rows );
 
     /*1_Cicle to multiply*/
     for(int i = 0; i < bMatrix.getColums(); i++)  //By number of colums for the second matrix
